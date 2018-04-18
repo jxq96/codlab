@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "E:/cod lab/codlab3/ram/REG_FILE.xst" -ofn "E:/cod lab/codlab3/ram/REG_FILE.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 "REG_FILE.ngc" REG_FILE.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o REG_FILE_map.ncd REG_FILE.ngd REG_FILE.pcf 
+par -w -intstyle ise -ol high -mt off REG_FILE_map.ncd REG_FILE.ncd REG_FILE.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml REG_FILE.twx REG_FILE.ncd -o REG_FILE.twr REG_FILE.pcf 

@@ -1,0 +1,605 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\cod lab\codlab3\ram\REG_FILE.v" into library work
+Parsing module <REG_FILE>.
+Analyzing Verilog file "E:\cod lab\codlab3\ram\ipcore_dir\RAM.v" into library work
+Parsing module <RAM>.
+Analyzing Verilog file "E:\cod lab\codlab3\ram\control.v" into library work
+Parsing module <control>.
+WARNING:HDLCompiler:568 - "E:\cod lab\codlab3\ram\control.v" Line 70: Constant value is truncated to fit in <5> bits.
+WARNING:HDLCompiler:568 - "E:\cod lab\codlab3\ram\control.v" Line 81: Constant value is truncated to fit in <5> bits.
+Analyzing Verilog file "E:\cod lab\codlab3\ram\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "E:\cod lab\codlab3\ram\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <ALU>.
+
+Elaborating module <REG_FILE>.
+
+Elaborating module <RAM>.
+WARNING:HDLCompiler:1499 - "E:\cod lab\codlab3\ram\ipcore_dir\RAM.v" Line 39: Empty module <RAM> remains a black box.
+WARNING:HDLCompiler:189 - "E:\cod lab\codlab3\ram\top.v" Line 35: Size mismatch in connection of port <ena>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <control>.
+WARNING:HDLCompiler:413 - "E:\cod lab\codlab3\ram\control.v" Line 40: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\cod lab\codlab3\ram\control.v" Line 48: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\cod lab\codlab3\ram\control.v" Line 49: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\cod lab\codlab3\ram\control.v" Line 55: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "E:\cod lab\codlab3\ram\control.v" Line 71: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "E:\cod lab\codlab3\ram\top.v".
+WARNING:Xst:737 - Found 1-bit latch for signal <we>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 6-bit comparator greater for signal <where[5]_GND_1_o_LessThan_3_o> created at line 40
+    Found 6-bit comparator greater for signal <RAddr1[5]_PWR_1_o_LessThan_4_o> created at line 51
+    Summary:
+	inferred   1 Latch(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "E:\cod lab\codlab3\ram\ALU.v".
+        A_NOP = 5'b00000
+        A_ADD = 5'b00001
+        A_SUB = 5'b00010
+        A_AND = 5'b00011
+        A_OR = 5'b00100
+        A_XOR = 5'b00101
+        A_NOR = 5'b00110
+    Found 32-bit subtractor for signal <alu_a[31]_alu_b[31]_sub_2_OUT> created at line 40.
+    Found 32-bit adder for signal <alu_a[31]_alu_b[31]_add_0_OUT> created at line 39.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <REG_FILE>.
+    Related source file is "E:\cod lab\codlab3\ram\REG_FILE.v".
+    Found 2048-bit register for signal <n0077[2047:0]>.
+    Found 32-bit 64-to-1 multiplexer for signal <rDout1> created at line 39.
+    Found 32-bit 64-to-1 multiplexer for signal <rDout2> created at line 40.
+    Summary:
+	inferred 2048 D-type flip-flop(s).
+	inferred  66 Multiplexer(s).
+Unit <REG_FILE> synthesized.
+
+Synthesizing Unit <control>.
+    Related source file is "E:\cod lab\codlab3\ram\control.v".
+    Found 6-bit register for signal <Addr>.
+    Found 6-bit register for signal <init>.
+    Found 1-bit register for signal <c_control>.
+    Found 6-bit adder for signal <init[5]_GND_5_o_add_1_OUT> created at line 40.
+    Found 6-bit adder for signal <Addr[5]_GND_5_o_add_5_OUT> created at line 48.
+    Found 6-bit adder for signal <Addr[5]_GND_5_o_add_6_OUT> created at line 49.
+    Found 6-bit subtractor for signal <GND_5_o_GND_5_o_sub_8_OUT<5:0>> created at line 55.
+    Found 6-bit comparator greater for signal <init[5]_GND_5_o_LessThan_13_o> created at line 67
+    Found 6-bit comparator lessequal for signal <n0014> created at line 70
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 6-bit adder                                           : 2
+ 6-bit addsub                                          : 1
+# Registers                                            : 4
+ 1-bit register                                        : 1
+ 2048-bit register                                     : 1
+ 6-bit register                                        : 2
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 4
+ 6-bit comparator greater                              : 3
+ 6-bit comparator lessequal                            : 1
+# Multiplexers                                         : 73
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 65
+ 32-bit 64-to-1 multiplexer                            : 2
+ 6-bit 2-to-1 multiplexer                              : 5
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/RAM.ngc>.
+Loading core <RAM> for timing and area information for instance <myRAM>.
+
+Synthesizing (advanced) Unit <control>.
+The following registers are absorbed into counter <init>: 1 register on signal <init>.
+Unit <control> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 1
+ 6-bit adder                                           : 1
+ 6-bit addsub                                          : 1
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 2055
+ Flip-Flops                                            : 2055
+# Comparators                                          : 4
+ 6-bit comparator greater                              : 3
+ 6-bit comparator lessequal                            : 1
+# Multiplexers                                         : 73
+ 1-bit 2-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 65
+ 32-bit 64-to-1 multiplexer                            : 2
+ 6-bit 2-to-1 multiplexer                              : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    we in unit <top>
+
+
+Optimizing unit <top> ...
+
+Optimizing unit <REG_FILE> ...
+
+Optimizing unit <control> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 53.
+FlipFlop mycontrol/Addr_0 has been replicated 1 time(s)
+FlipFlop mycontrol/Addr_1 has been replicated 1 time(s)
+FlipFlop mycontrol/init_0 has been replicated 1 time(s)
+FlipFlop mycontrol/init_1 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2065
+ Flip-Flops                                            : 2065
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4163
+#      GND                         : 2
+#      INV                         : 2
+#      LUT2                        : 36
+#      LUT3                        : 34
+#      LUT4                        : 27
+#      LUT5                        : 2266
+#      LUT6                        : 1732
+#      MUXCY                       : 31
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 2066
+#      FDCE                        : 17
+#      FDCE_1                      : 2048
+#      LD                          : 1
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 1
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2066  out of  18224    11%  
+ Number of Slice LUTs:                 4097  out of   9112    44%  
+    Number used as Logic:              4097  out of   9112    44%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4109
+   Number with an unused Flip Flop:    2043  out of   4109    49%  
+   Number with an unused LUT:            12  out of   4109     0%  
+   Number of fully used LUT-FF pairs:  2054  out of   4109    49%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    232    14%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 2066  |
+we_G(we_G:O)                       | NONE(*)(we)            | 1     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 22.262ns (Maximum Frequency: 44.920MHz)
+   Minimum input arrival time before clock: 4.899ns
+   Maximum output required time after clock: 14.281ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 22.262ns (frequency: 44.920MHz)
+  Total number of paths / destination ports: 37591426 / 4174
+-------------------------------------------------------------------------
+Delay:               11.131ns (Levels of Logic = 39)
+  Source:            mycontrol/init_2 (FF)
+  Destination:       myREG_FILE/regfile_63_2047 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: mycontrol/init_2 to myREG_FILE/regfile_63_2047
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            13   0.447   1.180  mycontrol/init_2 (mycontrol/init_2)
+     LUT4:I0->O           19   0.203   1.072  mycontrol/Mmux_Addr[5]_GND_5_o_mux_17_OUT3111_1 (mycontrol/Mmux_Addr[5]_GND_5_o_mux_17_OUT3111)
+     LUT4:I3->O          515   0.205   2.091  mycontrol/RAddr1<1>1 (RAddr1<1>)
+     LUT6:I5->O            1   0.205   0.827  myREG_FILE/Mmux_rDout1_122 (myREG_FILE/Mmux_rDout1_122)
+     LUT6:I2->O            1   0.203   0.827  myREG_FILE/Mmux_rDout1_7 (myREG_FILE/Mmux_rDout1_7)
+     LUT6:I2->O            1   0.203   0.580  myREG_FILE/rAddr1<5>351 (RE_OUT1<0>)
+     LUT2:I1->O            1   0.205   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_lut<0> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<0> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<1> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<2> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<3> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<4> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<5> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<6> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<7> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<8> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<9> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<10> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<11> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<12> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<13> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<14> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<15> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<16> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<17> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<18> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<19> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<20> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<21> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<22> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<23> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<24> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<25> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<26> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<27> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<28> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<29> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<30> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<30>)
+     XORCY:CI->O          66   0.180   1.654  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_xor<31> (alu_out<31>)
+     LUT5:I4->O            1   0.205   0.000  myREG_FILE/Mmux_regfile[0][31]_wDin[31]_mux_66_OUT251 (myREG_FILE/regfile[0][31]_wDin[31]_mux_66_OUT<31>)
+     FDCE_1:D                  0.102          myREG_FILE/regfile_63_2047
+    ----------------------------------------
+    Total                     11.131ns (2.900ns logic, 8.231ns route)
+                                       (26.1% logic, 73.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2065 / 2065
+-------------------------------------------------------------------------
+Offset:              4.899ns (Levels of Logic = 2)
+  Source:            rst_n (PAD)
+  Destination:       myREG_FILE/regfile_63_2047 (FF)
+  Destination Clock: clk falling
+
+  Data Path: rst_n to myREG_FILE/regfile_63_2047
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O           2065   0.206   2.462  myREG_FILE/rst_n_inv1_INV_0 (myREG_FILE/rst_n_inv)
+     FDCE_1:CLR                0.430          myREG_FILE/regfile_63_0
+    ----------------------------------------
+    Total                      4.899ns (1.858ns logic, 3.041ns route)
+                                       (37.9% logic, 62.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 573600 / 32
+-------------------------------------------------------------------------
+Offset:              14.281ns (Levels of Logic = 40)
+  Source:            mycontrol/init_2 (FF)
+  Destination:       tmp<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: mycontrol/init_2 to tmp<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            13   0.447   1.180  mycontrol/init_2 (mycontrol/init_2)
+     LUT4:I0->O           19   0.203   1.072  mycontrol/Mmux_Addr[5]_GND_5_o_mux_17_OUT3111_1 (mycontrol/Mmux_Addr[5]_GND_5_o_mux_17_OUT3111)
+     LUT4:I3->O          515   0.205   2.091  mycontrol/RAddr1<1>1 (RAddr1<1>)
+     LUT6:I5->O            1   0.205   0.827  myREG_FILE/Mmux_rDout1_122 (myREG_FILE/Mmux_rDout1_122)
+     LUT6:I2->O            1   0.203   0.827  myREG_FILE/Mmux_rDout1_7 (myREG_FILE/Mmux_rDout1_7)
+     LUT6:I2->O            1   0.203   0.580  myREG_FILE/rAddr1<5>351 (RE_OUT1<0>)
+     LUT2:I1->O            1   0.205   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_lut<0> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<0> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<1> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<2> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<3> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<4> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<5> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<6> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<7> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<8> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<9> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<10> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<11> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<12> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<13> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<14> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<15> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<16> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<17> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<18> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<19> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<20> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<21> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<22> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<23> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<24> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<25> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<26> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<27> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<28> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<29> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<29>)
+     MUXCY:CI->O           0   0.019   0.000  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<30> (myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_cy<30>)
+     XORCY:CI->O          66   0.180   1.758  myALU/Madd_alu_a[31]_alu_b[31]_add_0_OUT_xor<31> (alu_out<31>)
+     LUT3:I1->O            1   0.203   0.579  Mmux_tmp251 (tmp_31_OBUF)
+     OBUF:I->O                 2.571          tmp_31_OBUF (tmp<31>)
+    ----------------------------------------
+    Total                     14.281ns (5.367ns logic, 8.914ns route)
+                                       (37.6% logic, 62.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   11.123|    8.648|   11.131|         |
+we_G           |         |    1.431|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock we_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.897|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 42.00 secs
+Total CPU time to Xst completion: 41.68 secs
+ 
+--> 
+
+Total memory usage is 418108 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

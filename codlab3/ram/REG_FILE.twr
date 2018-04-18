@@ -1,0 +1,561 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml REG_FILE.twx REG_FILE.ncd -o REG_FILE.twr REG_FILE.pcf
+
+Design file:              REG_FILE.ncd
+Physical constraint file: REG_FILE.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+rst_n       |    7.006(F)|      SLOW  |    0.150(F)|      SLOW  |clk_BUFGP         |   0.000|
+wAddr<0>    |    9.807(F)|      SLOW  |   -0.437(F)|      SLOW  |clk_BUFGP         |   0.000|
+wAddr<1>    |    8.542(F)|      SLOW  |   -0.948(F)|      FAST  |clk_BUFGP         |   0.000|
+wAddr<2>    |    9.892(F)|      SLOW  |   -0.981(F)|      FAST  |clk_BUFGP         |   0.000|
+wAddr<3>    |    8.870(F)|      SLOW  |   -1.002(F)|      FAST  |clk_BUFGP         |   0.000|
+wAddr<4>    |   10.549(F)|      SLOW  |   -0.908(F)|      SLOW  |clk_BUFGP         |   0.000|
+wAddr<5>    |    9.026(F)|      SLOW  |   -0.935(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<0>     |    6.587(F)|      SLOW  |   -0.779(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<1>     |    5.496(F)|      SLOW  |   -0.590(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<2>     |    4.824(F)|      SLOW  |   -0.434(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<3>     |    4.356(F)|      SLOW  |    0.076(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<4>     |    4.322(F)|      SLOW  |   -0.112(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<5>     |    4.830(F)|      SLOW  |    0.075(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<6>     |    3.226(F)|      SLOW  |   -0.001(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<7>     |    3.355(F)|      SLOW  |   -0.024(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<8>     |    4.019(F)|      SLOW  |   -0.370(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<9>     |    5.393(F)|      SLOW  |   -0.497(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<10>    |    3.944(F)|      SLOW  |   -0.515(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<11>    |    6.442(F)|      SLOW  |   -0.257(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<12>    |    7.107(F)|      SLOW  |   -0.757(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<13>    |    9.092(F)|      SLOW  |   -0.876(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<14>    |    7.068(F)|      SLOW  |   -0.922(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<15>    |    7.111(F)|      SLOW  |   -0.943(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<16>    |    6.814(F)|      SLOW  |   -1.308(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<17>    |    6.815(F)|      SLOW  |   -1.157(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<18>    |    6.576(F)|      SLOW  |   -1.713(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<19>    |    7.879(F)|      SLOW  |   -1.516(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<20>    |    7.260(F)|      SLOW  |   -1.530(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<21>    |    5.603(F)|      SLOW  |   -1.774(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<22>    |    8.688(F)|      SLOW  |   -1.359(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<23>    |    7.392(F)|      SLOW  |   -1.139(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<24>    |    5.759(F)|      SLOW  |   -1.430(F)|      FAST  |clk_BUFGP         |   0.000|
+wDin<25>    |    7.171(F)|      SLOW  |   -0.809(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<26>    |    7.578(F)|      SLOW  |   -0.619(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<27>    |    5.689(F)|      SLOW  |   -0.358(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<28>    |    6.887(F)|      SLOW  |   -0.642(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<29>    |    5.667(F)|      SLOW  |   -0.473(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<30>    |    6.639(F)|      SLOW  |   -0.569(F)|      SLOW  |clk_BUFGP         |   0.000|
+wDin<31>    |    4.132(F)|      SLOW  |   -0.571(F)|      SLOW  |clk_BUFGP         |   0.000|
+wEna        |   11.491(F)|      SLOW  |    0.328(F)|      SLOW  |clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+rDout1<0>   |        12.377(F)|      SLOW  |         4.916(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<1>   |        11.988(F)|      SLOW  |         4.841(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<2>   |        11.507(F)|      SLOW  |         4.901(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<3>   |        10.768(F)|      SLOW  |         4.421(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<4>   |        11.568(F)|      SLOW  |         4.838(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<5>   |        12.209(F)|      SLOW  |         4.959(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<6>   |        12.522(F)|      SLOW  |         5.561(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<7>   |        12.526(F)|      SLOW  |         5.248(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<8>   |        13.119(F)|      SLOW  |         5.256(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<9>   |        13.334(F)|      SLOW  |         5.311(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<10>  |        13.467(F)|      SLOW  |         5.748(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<11>  |        13.327(F)|      SLOW  |         5.773(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<12>  |        14.187(F)|      SLOW  |         5.847(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<13>  |        14.582(F)|      SLOW  |         6.207(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<14>  |        14.669(F)|      SLOW  |         6.245(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<15>  |        14.510(F)|      SLOW  |         6.308(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<16>  |        14.781(F)|      SLOW  |         6.417(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<17>  |        13.951(F)|      SLOW  |         6.141(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<18>  |        14.138(F)|      SLOW  |         6.163(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<19>  |        13.905(F)|      SLOW  |         6.413(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<20>  |        14.544(F)|      SLOW  |         6.155(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<21>  |        13.626(F)|      SLOW  |         6.141(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<22>  |        13.861(F)|      SLOW  |         6.097(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<23>  |        14.367(F)|      SLOW  |         5.962(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<24>  |        13.714(F)|      SLOW  |         6.057(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<25>  |        13.140(F)|      SLOW  |         5.629(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<26>  |        13.854(F)|      SLOW  |         5.698(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<27>  |        14.253(F)|      SLOW  |         5.786(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<28>  |        13.122(F)|      SLOW  |         5.409(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<29>  |        12.668(F)|      SLOW  |         5.257(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<30>  |        13.324(F)|      SLOW  |         5.527(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout1<31>  |        12.482(F)|      SLOW  |         5.665(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<0>   |        11.507(F)|      SLOW  |         4.831(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<1>   |        11.551(F)|      SLOW  |         4.721(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<2>   |        11.505(F)|      SLOW  |         4.624(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<3>   |        11.720(F)|      SLOW  |         4.832(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<4>   |        12.016(F)|      SLOW  |         4.954(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<5>   |        13.443(F)|      SLOW  |         5.408(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<6>   |        12.837(F)|      SLOW  |         5.380(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<7>   |        13.430(F)|      SLOW  |         5.460(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<8>   |        12.623(F)|      SLOW  |         5.215(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<9>   |        13.036(F)|      SLOW  |         5.225(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<10>  |        13.154(F)|      SLOW  |         5.274(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<11>  |        13.198(F)|      SLOW  |         5.161(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<12>  |        13.710(F)|      SLOW  |         5.123(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<13>  |        13.136(F)|      SLOW  |         4.930(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<14>  |        12.260(F)|      SLOW  |         5.164(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<15>  |        12.326(F)|      SLOW  |         4.870(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<16>  |        12.996(F)|      SLOW  |         5.205(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<17>  |        11.861(F)|      SLOW  |         4.697(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<18>  |        11.749(F)|      SLOW  |         4.611(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<19>  |        11.613(F)|      SLOW  |         4.755(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<20>  |        11.768(F)|      SLOW  |         4.568(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<21>  |        12.347(F)|      SLOW  |         4.369(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<22>  |        12.332(F)|      SLOW  |         4.392(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<23>  |        12.647(F)|      SLOW  |         4.558(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<24>  |        12.752(F)|      SLOW  |         4.815(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<25>  |        13.225(F)|      SLOW  |         4.736(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<26>  |        11.941(F)|      SLOW  |         4.035(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<27>  |        12.667(F)|      SLOW  |         4.867(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<28>  |        13.597(F)|      SLOW  |         5.235(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<29>  |        13.120(F)|      SLOW  |         5.428(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<30>  |        13.124(F)|      SLOW  |         5.223(F)|      FAST  |clk_BUFGP         |   0.000|
+rDout2<31>  |        13.382(F)|      SLOW  |         5.585(F)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |         |    0.990|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+rAddr1<0>      |rDout1<0>      |   14.600|
+rAddr1<0>      |rDout1<1>      |   13.440|
+rAddr1<0>      |rDout1<2>      |   12.706|
+rAddr1<0>      |rDout1<3>      |   12.671|
+rAddr1<0>      |rDout1<4>      |   12.753|
+rAddr1<0>      |rDout1<5>      |   12.883|
+rAddr1<0>      |rDout1<6>      |   13.593|
+rAddr1<0>      |rDout1<7>      |   13.310|
+rAddr1<0>      |rDout1<8>      |   14.003|
+rAddr1<0>      |rDout1<9>      |   14.724|
+rAddr1<0>      |rDout1<10>     |   15.169|
+rAddr1<0>      |rDout1<11>     |   15.145|
+rAddr1<0>      |rDout1<12>     |   15.652|
+rAddr1<0>      |rDout1<13>     |   16.549|
+rAddr1<0>      |rDout1<14>     |   18.261|
+rAddr1<0>      |rDout1<15>     |   18.032|
+rAddr1<0>      |rDout1<16>     |   18.830|
+rAddr1<0>      |rDout1<17>     |   18.337|
+rAddr1<0>      |rDout1<18>     |   18.451|
+rAddr1<0>      |rDout1<19>     |   19.023|
+rAddr1<0>      |rDout1<20>     |   18.994|
+rAddr1<0>      |rDout1<21>     |   18.280|
+rAddr1<0>      |rDout1<22>     |   18.278|
+rAddr1<0>      |rDout1<23>     |   18.661|
+rAddr1<0>      |rDout1<24>     |   18.569|
+rAddr1<0>      |rDout1<25>     |   18.292|
+rAddr1<0>      |rDout1<26>     |   15.703|
+rAddr1<0>      |rDout1<27>     |   18.512|
+rAddr1<0>      |rDout1<28>     |   15.556|
+rAddr1<0>      |rDout1<29>     |   15.136|
+rAddr1<0>      |rDout1<30>     |   15.786|
+rAddr1<0>      |rDout1<31>     |   15.889|
+rAddr1<1>      |rDout1<0>      |   13.671|
+rAddr1<1>      |rDout1<1>      |   12.940|
+rAddr1<1>      |rDout1<2>      |   14.633|
+rAddr1<1>      |rDout1<3>      |   13.989|
+rAddr1<1>      |rDout1<4>      |   14.149|
+rAddr1<1>      |rDout1<5>      |   14.401|
+rAddr1<1>      |rDout1<6>      |   14.295|
+rAddr1<1>      |rDout1<7>      |   14.792|
+rAddr1<1>      |rDout1<8>      |   14.975|
+rAddr1<1>      |rDout1<9>      |   14.498|
+rAddr1<1>      |rDout1<10>     |   15.077|
+rAddr1<1>      |rDout1<11>     |   15.214|
+rAddr1<1>      |rDout1<12>     |   15.937|
+rAddr1<1>      |rDout1<13>     |   16.783|
+rAddr1<1>      |rDout1<14>     |   17.580|
+rAddr1<1>      |rDout1<15>     |   17.470|
+rAddr1<1>      |rDout1<16>     |   19.475|
+rAddr1<1>      |rDout1<17>     |   18.320|
+rAddr1<1>      |rDout1<18>     |   19.028|
+rAddr1<1>      |rDout1<19>     |   18.453|
+rAddr1<1>      |rDout1<20>     |   18.512|
+rAddr1<1>      |rDout1<21>     |   17.543|
+rAddr1<1>      |rDout1<22>     |   17.635|
+rAddr1<1>      |rDout1<23>     |   17.736|
+rAddr1<1>      |rDout1<24>     |   17.652|
+rAddr1<1>      |rDout1<25>     |   16.064|
+rAddr1<1>      |rDout1<26>     |   15.831|
+rAddr1<1>      |rDout1<27>     |   15.421|
+rAddr1<1>      |rDout1<28>     |   14.913|
+rAddr1<1>      |rDout1<29>     |   15.234|
+rAddr1<1>      |rDout1<30>     |   14.838|
+rAddr1<1>      |rDout1<31>     |   14.455|
+rAddr1<2>      |rDout1<0>      |   12.063|
+rAddr1<2>      |rDout1<1>      |   12.622|
+rAddr1<2>      |rDout1<2>      |   11.629|
+rAddr1<2>      |rDout1<3>      |   11.423|
+rAddr1<2>      |rDout1<4>      |   12.303|
+rAddr1<2>      |rDout1<5>      |   12.728|
+rAddr1<2>      |rDout1<6>      |   13.795|
+rAddr1<2>      |rDout1<7>      |   13.831|
+rAddr1<2>      |rDout1<8>      |   14.931|
+rAddr1<2>      |rDout1<9>      |   15.121|
+rAddr1<2>      |rDout1<10>     |   15.757|
+rAddr1<2>      |rDout1<11>     |   16.297|
+rAddr1<2>      |rDout1<12>     |   16.534|
+rAddr1<2>      |rDout1<13>     |   17.667|
+rAddr1<2>      |rDout1<14>     |   18.213|
+rAddr1<2>      |rDout1<15>     |   17.949|
+rAddr1<2>      |rDout1<16>     |   17.990|
+rAddr1<2>      |rDout1<17>     |   17.955|
+rAddr1<2>      |rDout1<18>     |   18.834|
+rAddr1<2>      |rDout1<19>     |   17.790|
+rAddr1<2>      |rDout1<20>     |   18.601|
+rAddr1<2>      |rDout1<21>     |   17.948|
+rAddr1<2>      |rDout1<22>     |   17.064|
+rAddr1<2>      |rDout1<23>     |   16.038|
+rAddr1<2>      |rDout1<24>     |   15.110|
+rAddr1<2>      |rDout1<25>     |   13.750|
+rAddr1<2>      |rDout1<26>     |   13.513|
+rAddr1<2>      |rDout1<27>     |   13.755|
+rAddr1<2>      |rDout1<28>     |   13.600|
+rAddr1<2>      |rDout1<29>     |   14.515|
+rAddr1<2>      |rDout1<30>     |   15.484|
+rAddr1<2>      |rDout1<31>     |   13.890|
+rAddr1<3>      |rDout1<0>      |   11.587|
+rAddr1<3>      |rDout1<1>      |   11.921|
+rAddr1<3>      |rDout1<2>      |   11.827|
+rAddr1<3>      |rDout1<3>      |   11.420|
+rAddr1<3>      |rDout1<4>      |   11.927|
+rAddr1<3>      |rDout1<5>      |   14.919|
+rAddr1<3>      |rDout1<6>      |   13.214|
+rAddr1<3>      |rDout1<7>      |   13.692|
+rAddr1<3>      |rDout1<8>      |   14.020|
+rAddr1<3>      |rDout1<9>      |   14.250|
+rAddr1<3>      |rDout1<10>     |   15.229|
+rAddr1<3>      |rDout1<11>     |   15.647|
+rAddr1<3>      |rDout1<12>     |   16.073|
+rAddr1<3>      |rDout1<13>     |   16.619|
+rAddr1<3>      |rDout1<14>     |   17.555|
+rAddr1<3>      |rDout1<15>     |   17.313|
+rAddr1<3>      |rDout1<16>     |   17.683|
+rAddr1<3>      |rDout1<17>     |   17.662|
+rAddr1<3>      |rDout1<18>     |   18.077|
+rAddr1<3>      |rDout1<19>     |   17.977|
+rAddr1<3>      |rDout1<20>     |   18.955|
+rAddr1<3>      |rDout1<21>     |   15.885|
+rAddr1<3>      |rDout1<22>     |   15.832|
+rAddr1<3>      |rDout1<23>     |   14.101|
+rAddr1<3>      |rDout1<24>     |   12.949|
+rAddr1<3>      |rDout1<25>     |   12.823|
+rAddr1<3>      |rDout1<26>     |   12.479|
+rAddr1<3>      |rDout1<27>     |   13.342|
+rAddr1<3>      |rDout1<28>     |   11.935|
+rAddr1<3>      |rDout1<29>     |   13.328|
+rAddr1<3>      |rDout1<30>     |   13.585|
+rAddr1<3>      |rDout1<31>     |   12.445|
+rAddr1<4>      |rDout1<0>      |    9.417|
+rAddr1<4>      |rDout1<1>      |    8.990|
+rAddr1<4>      |rDout1<2>      |    7.900|
+rAddr1<4>      |rDout1<3>      |    7.281|
+rAddr1<4>      |rDout1<4>      |    8.846|
+rAddr1<4>      |rDout1<5>      |    9.186|
+rAddr1<4>      |rDout1<6>      |    9.976|
+rAddr1<4>      |rDout1<7>      |    9.567|
+rAddr1<4>      |rDout1<8>      |   10.364|
+rAddr1<4>      |rDout1<9>      |   10.761|
+rAddr1<4>      |rDout1<10>     |   11.571|
+rAddr1<4>      |rDout1<11>     |   11.133|
+rAddr1<4>      |rDout1<12>     |   11.997|
+rAddr1<4>      |rDout1<13>     |   13.129|
+rAddr1<4>      |rDout1<14>     |   13.687|
+rAddr1<4>      |rDout1<15>     |   13.406|
+rAddr1<4>      |rDout1<16>     |   14.271|
+rAddr1<4>      |rDout1<17>     |   13.926|
+rAddr1<4>      |rDout1<18>     |   14.212|
+rAddr1<4>      |rDout1<19>     |   14.472|
+rAddr1<4>      |rDout1<20>     |   14.742|
+rAddr1<4>      |rDout1<21>     |   12.932|
+rAddr1<4>      |rDout1<22>     |   12.953|
+rAddr1<4>      |rDout1<23>     |   12.994|
+rAddr1<4>      |rDout1<24>     |   13.098|
+rAddr1<4>      |rDout1<25>     |   11.645|
+rAddr1<4>      |rDout1<26>     |   12.448|
+rAddr1<4>      |rDout1<27>     |   12.213|
+rAddr1<4>      |rDout1<28>     |   11.149|
+rAddr1<4>      |rDout1<29>     |   10.303|
+rAddr1<4>      |rDout1<30>     |   11.394|
+rAddr1<4>      |rDout1<31>     |   10.692|
+rAddr1<5>      |rDout1<0>      |    9.196|
+rAddr1<5>      |rDout1<1>      |    8.715|
+rAddr1<5>      |rDout1<2>      |    8.213|
+rAddr1<5>      |rDout1<3>      |    7.212|
+rAddr1<5>      |rDout1<4>      |    8.544|
+rAddr1<5>      |rDout1<5>      |    9.599|
+rAddr1<5>      |rDout1<6>      |   10.437|
+rAddr1<5>      |rDout1<7>      |    9.768|
+rAddr1<5>      |rDout1<8>      |   10.668|
+rAddr1<5>      |rDout1<9>      |   10.978|
+rAddr1<5>      |rDout1<10>     |   11.312|
+rAddr1<5>      |rDout1<11>     |   11.275|
+rAddr1<5>      |rDout1<12>     |   11.749|
+rAddr1<5>      |rDout1<13>     |   13.759|
+rAddr1<5>      |rDout1<14>     |   14.378|
+rAddr1<5>      |rDout1<15>     |   13.927|
+rAddr1<5>      |rDout1<16>     |   14.979|
+rAddr1<5>      |rDout1<17>     |   14.511|
+rAddr1<5>      |rDout1<18>     |   15.134|
+rAddr1<5>      |rDout1<19>     |   14.779|
+rAddr1<5>      |rDout1<20>     |   15.280|
+rAddr1<5>      |rDout1<21>     |   12.853|
+rAddr1<5>      |rDout1<22>     |   12.891|
+rAddr1<5>      |rDout1<23>     |   13.137|
+rAddr1<5>      |rDout1<24>     |   12.430|
+rAddr1<5>      |rDout1<25>     |   12.078|
+rAddr1<5>      |rDout1<26>     |   12.329|
+rAddr1<5>      |rDout1<27>     |   12.311|
+rAddr1<5>      |rDout1<28>     |   11.620|
+rAddr1<5>      |rDout1<29>     |   10.534|
+rAddr1<5>      |rDout1<30>     |   11.455|
+rAddr1<5>      |rDout1<31>     |   10.436|
+rAddr2<0>      |rDout2<0>      |   13.805|
+rAddr2<0>      |rDout2<1>      |   15.857|
+rAddr2<0>      |rDout2<2>      |   16.494|
+rAddr2<0>      |rDout2<3>      |   15.217|
+rAddr2<0>      |rDout2<4>      |   17.269|
+rAddr2<0>      |rDout2<5>      |   18.547|
+rAddr2<0>      |rDout2<6>      |   18.829|
+rAddr2<0>      |rDout2<7>      |   19.218|
+rAddr2<0>      |rDout2<8>      |   16.698|
+rAddr2<0>      |rDout2<9>      |   17.348|
+rAddr2<0>      |rDout2<10>     |   16.151|
+rAddr2<0>      |rDout2<11>     |   16.747|
+rAddr2<0>      |rDout2<12>     |   15.315|
+rAddr2<0>      |rDout2<13>     |   14.742|
+rAddr2<0>      |rDout2<14>     |   15.903|
+rAddr2<0>      |rDout2<15>     |   16.053|
+rAddr2<0>      |rDout2<16>     |   16.374|
+rAddr2<0>      |rDout2<17>     |   16.573|
+rAddr2<0>      |rDout2<18>     |   13.914|
+rAddr2<0>      |rDout2<19>     |   15.788|
+rAddr2<0>      |rDout2<20>     |   14.010|
+rAddr2<0>      |rDout2<21>     |   11.945|
+rAddr2<0>      |rDout2<22>     |   11.587|
+rAddr2<0>      |rDout2<23>     |   12.711|
+rAddr2<0>      |rDout2<24>     |   14.171|
+rAddr2<0>      |rDout2<25>     |   13.428|
+rAddr2<0>      |rDout2<26>     |   13.650|
+rAddr2<0>      |rDout2<27>     |   13.340|
+rAddr2<0>      |rDout2<28>     |   15.074|
+rAddr2<0>      |rDout2<29>     |   15.581|
+rAddr2<0>      |rDout2<30>     |   14.549|
+rAddr2<0>      |rDout2<31>     |   15.624|
+rAddr2<1>      |rDout2<0>      |   14.248|
+rAddr2<1>      |rDout2<1>      |   15.456|
+rAddr2<1>      |rDout2<2>      |   16.151|
+rAddr2<1>      |rDout2<3>      |   15.717|
+rAddr2<1>      |rDout2<4>      |   17.061|
+rAddr2<1>      |rDout2<5>      |   18.901|
+rAddr2<1>      |rDout2<6>      |   19.058|
+rAddr2<1>      |rDout2<7>      |   19.328|
+rAddr2<1>      |rDout2<8>      |   17.145|
+rAddr2<1>      |rDout2<9>      |   16.575|
+rAddr2<1>      |rDout2<10>     |   16.232|
+rAddr2<1>      |rDout2<11>     |   16.138|
+rAddr2<1>      |rDout2<12>     |   15.768|
+rAddr2<1>      |rDout2<13>     |   14.818|
+rAddr2<1>      |rDout2<14>     |   15.832|
+rAddr2<1>      |rDout2<15>     |   16.005|
+rAddr2<1>      |rDout2<16>     |   15.910|
+rAddr2<1>      |rDout2<17>     |   16.539|
+rAddr2<1>      |rDout2<18>     |   15.214|
+rAddr2<1>      |rDout2<19>     |   16.310|
+rAddr2<1>      |rDout2<20>     |   13.915|
+rAddr2<1>      |rDout2<21>     |   12.771|
+rAddr2<1>      |rDout2<22>     |   12.184|
+rAddr2<1>      |rDout2<23>     |   12.883|
+rAddr2<1>      |rDout2<24>     |   13.788|
+rAddr2<1>      |rDout2<25>     |   13.361|
+rAddr2<1>      |rDout2<26>     |   13.197|
+rAddr2<1>      |rDout2<27>     |   14.296|
+rAddr2<1>      |rDout2<28>     |   15.361|
+rAddr2<1>      |rDout2<29>     |   14.734|
+rAddr2<1>      |rDout2<30>     |   14.957|
+rAddr2<1>      |rDout2<31>     |   15.309|
+rAddr2<2>      |rDout2<0>      |   11.604|
+rAddr2<2>      |rDout2<1>      |   14.599|
+rAddr2<2>      |rDout2<2>      |   14.059|
+rAddr2<2>      |rDout2<3>      |   14.346|
+rAddr2<2>      |rDout2<4>      |   15.478|
+rAddr2<2>      |rDout2<5>      |   16.092|
+rAddr2<2>      |rDout2<6>      |   16.382|
+rAddr2<2>      |rDout2<7>      |   16.152|
+rAddr2<2>      |rDout2<8>      |   15.503|
+rAddr2<2>      |rDout2<9>      |   15.106|
+rAddr2<2>      |rDout2<10>     |   14.472|
+rAddr2<2>      |rDout2<11>     |   14.297|
+rAddr2<2>      |rDout2<12>     |   14.599|
+rAddr2<2>      |rDout2<13>     |   14.254|
+rAddr2<2>      |rDout2<14>     |   14.438|
+rAddr2<2>      |rDout2<15>     |   14.609|
+rAddr2<2>      |rDout2<16>     |   15.242|
+rAddr2<2>      |rDout2<17>     |   13.439|
+rAddr2<2>      |rDout2<18>     |   12.850|
+rAddr2<2>      |rDout2<19>     |   12.955|
+rAddr2<2>      |rDout2<20>     |   12.212|
+rAddr2<2>      |rDout2<21>     |   10.446|
+rAddr2<2>      |rDout2<22>     |    9.979|
+rAddr2<2>      |rDout2<23>     |   10.876|
+rAddr2<2>      |rDout2<24>     |   10.843|
+rAddr2<2>      |rDout2<25>     |   10.856|
+rAddr2<2>      |rDout2<26>     |   10.172|
+rAddr2<2>      |rDout2<27>     |   11.400|
+rAddr2<2>      |rDout2<28>     |   12.422|
+rAddr2<2>      |rDout2<29>     |   13.149|
+rAddr2<2>      |rDout2<30>     |   12.847|
+rAddr2<2>      |rDout2<31>     |   13.544|
+rAddr2<3>      |rDout2<0>      |   11.310|
+rAddr2<3>      |rDout2<1>      |   13.688|
+rAddr2<3>      |rDout2<2>      |   13.839|
+rAddr2<3>      |rDout2<3>      |   14.063|
+rAddr2<3>      |rDout2<4>      |   13.618|
+rAddr2<3>      |rDout2<5>      |   15.886|
+rAddr2<3>      |rDout2<6>      |   15.813|
+rAddr2<3>      |rDout2<7>      |   15.912|
+rAddr2<3>      |rDout2<8>      |   15.214|
+rAddr2<3>      |rDout2<9>      |   13.442|
+rAddr2<3>      |rDout2<10>     |   13.813|
+rAddr2<3>      |rDout2<11>     |   13.901|
+rAddr2<3>      |rDout2<12>     |   14.009|
+rAddr2<3>      |rDout2<13>     |   13.368|
+rAddr2<3>      |rDout2<14>     |   12.690|
+rAddr2<3>      |rDout2<15>     |   12.914|
+rAddr2<3>      |rDout2<16>     |   12.956|
+rAddr2<3>      |rDout2<17>     |   13.154|
+rAddr2<3>      |rDout2<18>     |   12.113|
+rAddr2<3>      |rDout2<19>     |   12.158|
+rAddr2<3>      |rDout2<20>     |   10.854|
+rAddr2<3>      |rDout2<21>     |   10.199|
+rAddr2<3>      |rDout2<22>     |   10.203|
+rAddr2<3>      |rDout2<23>     |   10.842|
+rAddr2<3>      |rDout2<24>     |   10.491|
+rAddr2<3>      |rDout2<25>     |   10.773|
+rAddr2<3>      |rDout2<26>     |    9.913|
+rAddr2<3>      |rDout2<27>     |   11.086|
+rAddr2<3>      |rDout2<28>     |   12.103|
+rAddr2<3>      |rDout2<29>     |   12.648|
+rAddr2<3>      |rDout2<30>     |   12.480|
+rAddr2<3>      |rDout2<31>     |   13.157|
+rAddr2<4>      |rDout2<0>      |    9.388|
+rAddr2<4>      |rDout2<1>      |    9.856|
+rAddr2<4>      |rDout2<2>      |   10.115|
+rAddr2<4>      |rDout2<3>      |   10.183|
+rAddr2<4>      |rDout2<4>      |   11.354|
+rAddr2<4>      |rDout2<5>      |   11.754|
+rAddr2<4>      |rDout2<6>      |   11.616|
+rAddr2<4>      |rDout2<7>      |   11.710|
+rAddr2<4>      |rDout2<8>      |   10.723|
+rAddr2<4>      |rDout2<9>      |   10.260|
+rAddr2<4>      |rDout2<10>     |   10.046|
+rAddr2<4>      |rDout2<11>     |    9.759|
+rAddr2<4>      |rDout2<12>     |   10.472|
+rAddr2<4>      |rDout2<13>     |   10.175|
+rAddr2<4>      |rDout2<14>     |   10.858|
+rAddr2<4>      |rDout2<15>     |   10.749|
+rAddr2<4>      |rDout2<16>     |   11.561|
+rAddr2<4>      |rDout2<17>     |   11.298|
+rAddr2<4>      |rDout2<18>     |   11.589|
+rAddr2<4>      |rDout2<19>     |   12.186|
+rAddr2<4>      |rDout2<20>     |   11.542|
+rAddr2<4>      |rDout2<21>     |    8.831|
+rAddr2<4>      |rDout2<22>     |    8.825|
+rAddr2<4>      |rDout2<23>     |    9.201|
+rAddr2<4>      |rDout2<24>     |    8.732|
+rAddr2<4>      |rDout2<25>     |    8.478|
+rAddr2<4>      |rDout2<26>     |    6.941|
+rAddr2<4>      |rDout2<27>     |    8.634|
+rAddr2<4>      |rDout2<28>     |    8.740|
+rAddr2<4>      |rDout2<29>     |    9.671|
+rAddr2<4>      |rDout2<30>     |    9.268|
+rAddr2<4>      |rDout2<31>     |    9.836|
+rAddr2<5>      |rDout2<0>      |    9.182|
+rAddr2<5>      |rDout2<1>      |   10.519|
+rAddr2<5>      |rDout2<2>      |   11.047|
+rAddr2<5>      |rDout2<3>      |   11.015|
+rAddr2<5>      |rDout2<4>      |   10.683|
+rAddr2<5>      |rDout2<5>      |   10.995|
+rAddr2<5>      |rDout2<6>      |   11.161|
+rAddr2<5>      |rDout2<7>      |   11.558|
+rAddr2<5>      |rDout2<8>      |   10.828|
+rAddr2<5>      |rDout2<9>      |   10.423|
+rAddr2<5>      |rDout2<10>     |    9.864|
+rAddr2<5>      |rDout2<11>     |    9.608|
+rAddr2<5>      |rDout2<12>     |   10.532|
+rAddr2<5>      |rDout2<13>     |   10.607|
+rAddr2<5>      |rDout2<14>     |   10.809|
+rAddr2<5>      |rDout2<15>     |   10.824|
+rAddr2<5>      |rDout2<16>     |   12.197|
+rAddr2<5>      |rDout2<17>     |   10.953|
+rAddr2<5>      |rDout2<18>     |   10.860|
+rAddr2<5>      |rDout2<19>     |   11.343|
+rAddr2<5>      |rDout2<20>     |    9.199|
+rAddr2<5>      |rDout2<21>     |    8.388|
+rAddr2<5>      |rDout2<22>     |    8.506|
+rAddr2<5>      |rDout2<23>     |    8.725|
+rAddr2<5>      |rDout2<24>     |    8.164|
+rAddr2<5>      |rDout2<25>     |    8.103|
+rAddr2<5>      |rDout2<26>     |    6.364|
+rAddr2<5>      |rDout2<27>     |    7.458|
+rAddr2<5>      |rDout2<28>     |    8.251|
+rAddr2<5>      |rDout2<29>     |    8.889|
+rAddr2<5>      |rDout2<30>     |    8.805|
+rAddr2<5>      |rDout2<31>     |    9.555|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Apr 11 22:02:51 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 338 MB
+
+
+
